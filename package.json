@@ -1,0 +1,20 @@
+{
+  "name": "s-mohk",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "https://github.com/khoms/s-mohk.git",
+  "author": "Khoms <sundp.kshetri@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "start:web": "yarn lerna run dev --scope=@smohk/client",
+    "build:web": "yarn lerna run build --scope=@smohk/client",
+    "start:server": "yarn lerna run dev --scope=@smohk/server",
+    "build:server": "yarn setup && npx run build --scope=@smohk/server"
+  },
+  "devDependencies": {
+    "lerna": "^7.1.1"
+  }
+}
