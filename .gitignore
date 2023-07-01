@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 node_modules
 /apps/server/src/config
+/apps/steps
+

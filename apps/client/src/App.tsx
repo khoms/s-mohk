@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { StyledEngineProvider, ThemeProvider } from "@mui/material";
 import "./App.css";
+import { theme } from "./theme";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const [greeting, setGreeting] = useState("");
@@ -13,17 +14,14 @@ function App() {
   });
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>{greeting}</h1>
-    </>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <div></div>
+          <h1>{greeting}</h1>
+        </BrowserRouter>
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 }
 
