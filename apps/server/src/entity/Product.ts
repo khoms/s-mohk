@@ -1,11 +1,15 @@
 import {
   BaseEntity,
   Column,
+  Entity,
   ManyToMany,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Category } from './Category';
+import { BillItem } from './BillItem';
 
+@Entity()
 export class Product extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: string;
@@ -24,4 +28,7 @@ export class Product extends BaseEntity {
 
   @ManyToMany((_type) => Category, (category) => category.products)
   category: Category[];
+
+  @OneToMany((_typeName) => BillItem, (billItem) => billItem.product)
+  billItem: BillItem[];
 }

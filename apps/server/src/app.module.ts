@@ -7,10 +7,20 @@ import { AuthModule } from './auth/auth.module';
 import { CategoryModule } from './category/category.module';
 import { BillModule } from './bill/bill.module';
 import { BillItemModule } from './bill-item/bill-item.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { config } from './config/db.config';
 
 @Module({
-  imports: [UserModule, ProductModule, AuthModule, CategoryModule, BillModule, BillItemModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    TypeOrmModule.forRoot(config),
+    UserModule,
+    ProductModule,
+    AuthModule,
+    CategoryModule,
+    BillModule,
+    BillItemModule,
+  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

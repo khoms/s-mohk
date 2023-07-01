@@ -1,6 +1,13 @@
-import { BaseEntity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import {
+  BaseEntity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToMany,
+  Entity,
+} from 'typeorm';
 import { BillItem } from './BillItem';
 
+@Entity()
 export class Bill extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: string;
