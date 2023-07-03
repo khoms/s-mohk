@@ -1,5 +1,5 @@
-import {Components, Theme} from "@mui/material";
-import Color from "utils/Color";
+import { Components, Theme } from "@mui/material";
+import Color from "../utils/Color";
 
 const componentStyles: Components<Omit<Theme, "components">> = {
   MuiContainer: {

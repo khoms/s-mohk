@@ -1,6 +1,5 @@
-import {Typography} from "@mui/material/styles/createTypography";
-
-import Color from "utils/Color";
+import { Typography } from "@mui/material/styles/createTypography";
+import Color from "../utils/Color";
 
 export const textStyles: Partial<Typography> = {
   fontFamily: ["Poppins", "sans-serif"].join(","),

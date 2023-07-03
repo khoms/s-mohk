@@ -1,5 +1,5 @@
-import {PaletteOptions} from "@mui/material/styles/createPalette";
-import Color from "utils/Color";
+import { PaletteOptions } from "@mui/material/styles/createPalette";
+import Color from "../utils/Color";
 
 export const appPalette: PaletteOptions = {
   primary: {

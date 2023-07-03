@@ -3,6 +3,7 @@ import { StyledEngineProvider, ThemeProvider } from "@mui/material";
 import "./App.css";
 import { theme } from "./theme";
 import { BrowserRouter } from "react-router-dom";
+import DashboardPage from "./pages/main/DashboardPage";
 
 function App() {
   const [greeting, setGreeting] = useState("");
@@ -17,8 +18,7 @@ function App() {
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
         <BrowserRouter>
-          <div></div>
-          <h1>{greeting}</h1>
+          <DashboardPage />
         </BrowserRouter>
       </ThemeProvider>
     </StyledEngineProvider>
