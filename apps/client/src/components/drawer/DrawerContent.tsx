@@ -9,7 +9,8 @@ import DrawerButton from "./DrawerButton";
 const DrawerContent = ({ menuList }: { menuList: DrawerMenuItem[][] }) => {
   return (
     <div style={{ background: "#111315", color: "white", height: "100vh" }}>
-      <Toolbar /> {/* This is the space between the app bar and the drawer */}
+      <Toolbar />
+      {/* This is the space between the app bar and the drawer */}
       <Divider />
       <List>
         {menuList.map((list, index) => {

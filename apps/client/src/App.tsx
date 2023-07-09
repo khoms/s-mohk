@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { StyledEngineProvider, ThemeProvider } from "@mui/material";
 import "./App.css";
 import { theme } from "./theme";
-import { BrowserRouter } from "react-router-dom";
-import DashboardPage from "./pages/main/DashboardPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MainRoute from "./routes/Navigation";
 
 function App() {
   const [greeting, setGreeting] = useState("");
@@ -18,7 +18,9 @@ function App() {
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
         <BrowserRouter>
-          <DashboardPage />
+          <Routes>
+            <Route path="*" element={<MainRoute />} />
+          </Routes>
         </BrowserRouter>
       </ThemeProvider>
     </StyledEngineProvider>
