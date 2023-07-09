@@ -15,6 +15,7 @@ const HomePage = () => {
           <SlickSlider2 />
         </Box>
       </Box>
+      <LineChart />
       <Box display="flex" gap={3} width="100%"></Box>
     </Box>
   );
